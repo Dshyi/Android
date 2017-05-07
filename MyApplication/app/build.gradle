@@ -30,5 +30,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'cc.trity.floatingactionbutton:library:1.0.0'
     compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:recyclerview-v7:25.+'
     testCompile 'junit:junit:4.12'
 }

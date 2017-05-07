@@ -7,10 +7,6 @@
     android:orientation="vertical"
     >
 
-    <include
-        layout="@layout/part_common_title"
-        />
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,8 +22,27 @@
             android:paddingRight="20dp"
             >
 
+            <EditText
+                android:id="@+id/select_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_add_diary_title"
+                android:enabled="true"
+                android:gravity="top"
+
+                android:maxLines="10"
+                android:minLines="8"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:scrollbars="vertical"
+                tools:text="标题"
+                android:fontFamily="sans-serif"
+                android:textColor="@android:color/black"
+                android:singleLine="false" />
+
             <TextView
-                android:id="@+id/thisday"
+                android:id="@+id/select_day"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:gravity="center_vertical"
@@ -35,42 +50,24 @@
                 android:textSize="15sp"
                 />
 
-            <EditText
-                android:id="@+id/title_text"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/shape_add_diary_title"
-                android:enabled="true"
-                android:gravity="top"
-                android:maxLines="10"
-                android:minLines="8"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="5dp"
-                android:scrollbars="vertical"
-                tools:text="标题"
-                android:fontFamily="sans-serif"
-                android:textColor="?attr/actionMenuTextColor" />
-
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="5dp"
                 android:background="#ffff00" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
             <EditText
-                android:id="@+id/content_text"
+                android:id="@+id/select_content"
                 android:layout_width="match_parent"
 
                 android:background="@drawable/shape_content"
                 android:paddingTop="10dp"
                 android:gravity="top"
                 android:lineSpacingMultiplier="1.2"
-                android:layout_height="match_parent" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"/>
-
+                android:layout_height="356dp" />
 
 
             <LinearLayout
@@ -96,28 +93,20 @@
             app:fab_addButtonSize="mini"
             >
 
-            <cc.trity.floatingactionbutton.FloatingActionButton
-                android:id="@+id/add_diary_back"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:fab_colorNormal="#24d63c"
-                app:fab_size="normal"
-                app:fab_icon = "@drawable/back_new"
-                />
 
             <cc.trity.floatingactionbutton.FloatingActionButton
-                android:id="@+id/add_diary_add"
+                android:id="@+id/select_back"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/save"
+                android:background="@drawable/ic_arrow_back_black_24dp"
                 app:fab_size="normal"
                 app:fab_title="FAB 2"
                 app:fab_colorNormal="#e41c1c"
-                app:fab_icon = "@drawable/save_new"
+                app:fab_icon = "@drawable/ic_arrow_back_black_24dp"
                 />
 
             <cc.trity.floatingactionbutton.FloatingActionButton
-                android:id="@+id/add_diary_delete"
+                android:id="@+id/select_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/delete"
@@ -125,31 +114,10 @@
                 app:fab_icon = "@drawable/delete"
                 app:fab_size="normal"
                 app:fab_title="FAB 2"
-
                 />
-
-            />
-
 
         </cc.trity.floatingactionbutton.FloatingActionsMenu>
 
 
     </RelativeLayout>
 </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

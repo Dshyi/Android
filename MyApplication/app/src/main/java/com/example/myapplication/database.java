@@ -7,27 +7,24 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class database extends SQLiteOpenHelper {
 
-    public static final String CREATE_DIARY = "create table Diary("
-            + "id integer primary key autoincrement, "
-            + "date text, "
-            + "title text, "
-            + "tag text, "
-            + "content text)";
+    public static final String table_name ="base";
+    public static final String TITLE ="title";
+    public static final String CONTENT ="content";
+    public static final String ID ="_id";
+    public static final String TIME ="time";
 
-    private Context mContext;
-    public database(Context context, String name, SQLiteDatabase.CursorFactory factory, int version){
-        super(context, name, factory, version);
-        mContext = context;
+    public  database(Context context){
+        super(context,"base",null,1);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(CREATE_DIARY);
+        db.execSQL("CREATE TABLE " + table_name + "("
+        +ID+" INTEGER PRIMARY KEY AUTOINCREMENT," +TITLE+" TEXT NOT NULL,"+CONTENT+" TEXT NOT NULL,"
+        +TIME +" TEXT NOT NULL)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        db.execSQL("drop table if exists Diary");
-        onCreate(db);
     }
 }
