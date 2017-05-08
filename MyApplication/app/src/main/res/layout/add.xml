@@ -8,7 +8,7 @@
     >
 
     <include
-        layout="@layout/part_common_title"
+        layout="@layout/common"
         />
 
     <RelativeLayout
